@@ -7,7 +7,7 @@ sqlLite + django + python
 # Set Up
 git bash에서 실행
 ```
-    source name /Scripts/activate
-    cd myproject
-    python manage.py runserver
+source myvenv/Scripts/activate
+cd myproject
+python manage.py runserver
 ```
