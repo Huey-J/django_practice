@@ -1,10 +1,10 @@
-* Django Project
+# Django Project
 sqlLite + django + python
 
-* Purpose
+# Purpose
 장고 공부용 플젝입니다
 
-* Set Up
+# Set Up
 git bash에서 실행
 ```
     source name /Scripts/activate
