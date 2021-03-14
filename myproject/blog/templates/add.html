@@ -22,10 +22,10 @@
                         <a class="nav-link" aria-current="page" href="{%url 'home'%}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Details</a>
+                        <a class="nav-link" href="#">Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{%url 'add'%}">Write</a>
+                        <a class="nav-link active" href="{%url 'add'%}">Write</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -46,12 +46,20 @@
     <br>
 
     <div class="container">
-        <h2>제목: {{blog_detail.title}}</h2>
-        <p class="text-end">작성 날짜: {{blog_detail.pub_date}}</p>
-        <hr>
-        <p>자세한 본문: {{blog_detail.body}}</p>
-        <div class="text-end">
-            <a href="{%url 'home'%}" class="btn btn-dark">돌아가기</a>
-        </div>
+        <h2>글 추가하기</h2>
+        <br>
+        <form action="{%url 'create'%}">
+            <h4>제목: </h4>
+            <input type="text" name="title">
+            <br>
+            <br>
+            
+            <h4>내용: </h4>
+            <textarea name="body" cols=40 rows=10></textarea>
+            <br>
+            <br>
+
+            <input class="btn btn-dark" type="submit" value="추가하기">
+        </form>
     </div>
 </body>
