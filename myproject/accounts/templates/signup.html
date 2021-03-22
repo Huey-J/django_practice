@@ -7,17 +7,18 @@
         <h1>회원가입</h1>
         <br>
 
-        <form>
+        <form method="POST" action="{%url 'signup'%}">
+            {% csrf_token %}
             <h5>아이디: </h5>
-            <input type="text" name="account">
+            <input type="text" name="account" value="">
             <br><br>
 
             <h5>비밀번호: </h5>
-            <input type="password" name="password1">
+            <input type="password" name="password1" value="">
             <br><br>
 
             <h5>비밀번호 재입력: </h5>
-            <input type="password" name="password2">
+            <input type="password" name="password2" value="">
             <br><br>
 
             <input class="btn btn-dark" type="submit" value="가입하기">
