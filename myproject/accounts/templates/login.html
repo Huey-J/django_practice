@@ -1,7 +1,9 @@
 {% extends 'base.html'%}
 
-{% block contents %}
+{% load socialaccount %}
+{% providers_media_js %}
 
+{% block contents %}
 <body>
     <div class="container">
         <h1>로그인</h1>
@@ -18,6 +20,8 @@
             <br><br>
 
             <input class="btn btn-dark" type="submit" value="로그인">
+
+            <a href="{% provider_login_url 'google' %}">구글 로그인</a>
         </form>
     </div>
 </body>
